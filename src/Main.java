@@ -27,10 +27,10 @@ public class Main {
     }
 
     public static void task2() {
-        System.out.printf("2 задача%n");
+        System.out.println("2 задача");
         int[] arr = generateRandomArray();
-        int minEl = 999_999_999;
-        int maxEl = 0;
+        int minEl = arr[0];
+        int maxEl = arr[0];
         int summPerMonth = 0;
         for (int i = 0; i < arr.length; i++) {
             if (minEl > arr[i]) {
@@ -46,23 +46,22 @@ public class Main {
     }
 
     public static void task3() {
-        System.out.printf("3 задача%n");
+        System.out.println("3 задача");
         int[] arr = generateRandomArray();
         double midSum = 0;
-        int countMont = arr.length;
         for (int i = 0; i < arr.length; i++) {
             midSum += arr[i];
         }
-        midSum = midSum / countMont;
+        midSum = midSum / arr.length;
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей %n", midSum);
     }
 
     private static void task4() {
-        System.out.printf("4 задача%n");
+        System.out.println("4 задача");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.printf("%s", reverseFullName[i]);
         }
-        System.out.printf("%n");
+        System.out.println();
     }
 }
